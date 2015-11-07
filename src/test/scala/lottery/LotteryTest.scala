@@ -88,8 +88,7 @@ class LotteryTest extends FunSuite with Matchers with Futures
       val lotteryFut = lotteryBehavior.applyCommands(
         CreateLottery("TestLottery"),
         AddParticipant("John"),
-        AddParticipant("John"),
-        Run
+        AddParticipant("John")
       )
 
       whenFailed(lotteryFut) {
